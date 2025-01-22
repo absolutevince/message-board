@@ -1,0 +1,94 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #333;
+	color: #fff;
+	max-width: 768px;
+	margin: 0 auto;
+	border-inline: 1px solid #ccc;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	color: pink;
+}
+
+.button {
+	border: 1px solid #ccc;
+	color: #333;
+	padding: 0.5em 1em;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #eee;
+}
+
+.button.reply {
+	width: fit-content;
+	align-self: end;
+}
+
+.message-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.message,
+.message-full {
+	background-color: #444;
+	padding: 1rem;
+	display: flex;
+}
+
+.message {
+	justify-content: space-between;
+}
+
+.message-full {
+	flex-direction: column;
+}
+
+.message-full-user {
+	display: flex;
+	justify-content: space-between;
+}
+
+.message-full-user span {
+	font-size: 0.8rem;
+	color: #999;
+}
+
+.message-full-message {
+	padding-left: 1rem;
+	background-color: #999;
+	color: #222;
+	padding: 1rem;
+}
+
+.message-full-replies {
+	padding-left: 2rem;
+}
+
+/**  FORM*/
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 50%;
+}
+
+.form input {
+	padding: 0.5em 1em;
+	border: none;
+}

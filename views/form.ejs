@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Message Board | New Message</title>	
+		<link rel="stylesheet" href="/style.css">
+	</head>
+	<body>
+		<%- include("nav") %>
+		<form method="POST" action="/new" class="form">	
+			<input type="text" name="user"  placeholder="your name/alias" />
+			<input type='text' name="message" placeholder="message" />
+			<input type='submit' name="submit" />
+		</form>
+	<body>
+</html>

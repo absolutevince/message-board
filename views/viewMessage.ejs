@@ -1,0 +1,26 @@
+
+<html>
+	<head>
+		<title>Message Board | New Message</title>
+		<link rel="stylesheet" href="/style.css">
+	</head>
+	<body>
+	<%- include("nav") %>
+	<div class="message-full">
+	<div class="message-full-user">	
+		<p><%= user %>:</p>
+		<span> <%= added %></span>
+	</div>
+	<p class="message-full-message"><%= message %></p>	
+	</div>
+	<div class="message-full-replies">
+		<ul>	
+			<% for(let i = 0; i < replies.length; i++ ) {%>
+			<%- include("replyMessage", {message: replies[i].text, user: replies[i].user, added: replies[i].added})%>
+			<%}%>
+		<ul>
+	</div>
+
+	<a class="button reply" href=<%= "/reply/" + id %>>Reply</a>
+	<body>
+</html>

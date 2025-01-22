@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Message Board</title>
+ 		<link rel="stylesheet" href="/style.css">
+	</head>
+	<body>
+		<%- include("nav") %>
+		<ul class="message-list">
+			<% messages.forEach(msg => { %>
+			<%- include("message", {message: msg.text, user: msg.user, added: msg.added, id: msg.id}) %>
+			<% }) %>
+		</ul>
+	<body>
+</html>
